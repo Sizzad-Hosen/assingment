@@ -1,13 +1,11 @@
+import express, { Application } from 'express'
+import { UsersRouter } from './modules/users/users.route'
 
-
-import express, { Application} from 'express'
-import { UsersRoute } from './modules/users/users.route';
-
-const app: Application = express();
+const app: Application = express()
 
 // Ensure JSON parsing middleware is added
-app.use(express.json());
+app.use(express.json())
 
-app.use('/api/v1/users', UsersRoute)
+app.use('/api/v1/users', UsersRouter)
 
-export default app;
+export default app
